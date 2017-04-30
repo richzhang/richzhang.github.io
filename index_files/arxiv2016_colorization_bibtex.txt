@@ -1,6 +1,6 @@
-@article{zhang2016colorful,
-  title={Colorful Image Colorizations},
-  author={Zhang, Richard and Isola, Phillip and Efros, Alexei},
-  journal={arXiv preprint arXiv:},
+@inproceedings{zhang2016colorful,
+  title={Colorful Image Colorization},
+  author={Zhang, Richard and Isola, Phillip and Efros, Alexei A},
+  booktitle={arXiv},
   year={2016}
 }

@@ -1,8 +1,6 @@
 @inproceedings{zhang2015sensor,
   title={Sensor fusion for semantic segmentation of urban scenes},
   author={Zhang, Richard and Candra, Stefan A and Vetter, Kai and Zakhor, Avideh},
-  booktitle={Robotics and Automation (ICRA), 2015 IEEE International Conference on},
-  pages={1850--1857},
-  year={2015},
-  organization={IEEE}
+  booktitle={ICRA},
+  year={2015}
 }
