@@ -1,0 +1,14 @@
+@phdthesis{Zhang:EECS-2018-36,
+    Author = {Zhang, Richard},
+    Title = {Image Synthesis for Self-Supervised Visual Representation Learning},
+    School = {EECS Department, University of California, Berkeley},
+    Year = {2018},
+    Month = {May},
+    URL = {http://www2.eecs.berkeley.edu/Pubs/TechRpts/2018/EECS-2018-36.html},
+    Number = {UCB/EECS-2018-36},
+    Abstract = {Deep networks are extremely adept at mapping a noisy, high-dimensional signal to a clean, low-dimensional target output (e.g., image classification). By solving this heavy compression task, the network also learns about natural image priors. However, this process requires the curation of large, labeled datasets. Meanwhile, the world provides massive amounts of raw, unlabeled pixels for free. This thesis investigates learning representations of high-dimensional input signals by mapping them to high-dimensional output targets. While more difficult, it is not only possible to learn a strong feature representation, but also to synthesize realistic images.
+
+Part I describes the use of deep networks for conditional image synthesis. The section begins by exploring the problem of image colorization, proposing both automatic and user-guided approaches. This section then proposes a system for general image-to-image translation problems, BicycleGAN, with the specific aim of capturing the multimodal nature of the output space.
+
+Part II explores the visual representations learned within deep networks. Colorization, as well as cross-channel prediction in general, is a simple but powerful pretext task for self-supervised learning. The representations from cross-channel prediction networks transfer strongly to high-level semantic tasks, such as image classification, and to low-level human perceptual similarity judgments. For the latter, a large-scale dataset of human perceptual similarity judgments is collected. The proposed cross-channel network method outperforms traditional metrics such as PSNR and SSIM. In fact, many unsupervised and self-supervised methods transfer strongly, even comparably to fully-supervised methods.}
+}
