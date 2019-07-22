@@ -1,6 +1,6 @@
 @inproceedings{wang2019faldetector,
   title={Detecting Photoshopped Faces by Scripting Photoshop},
   author={Wang, Sheng-Yu and Wang, Oliver and Owens, Andrew and Zhang, Richard and Efros, Alexei A.},
-  booktitle={ArXiv},
+  booktitle={ICCV},
   year={2019}
 }
