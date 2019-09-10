@@ -1,0 +1,6 @@
+@inproceedings{iSketchNFill2019,
+  title={Interactive Sketch & Fill: Multiclass Sketch-to-Image Translation},
+  author={Ghosh, Arnab and Zhang, Richard and Dokania, Puneet K. and Wang, Oliver and Efros, Alexei A. and Torr, Philip H.S. and Shechtman, Eli},
+  booktitle={ICCV},
+  year={2019}
+}
