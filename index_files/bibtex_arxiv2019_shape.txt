@@ -1,8 +1,6 @@
-@article{smirnov_deep_2019,
+@inproceedings{smirnov_deep_2020,
  author = {Smirnov, Dmitriy and Fisher, Matthew and Kim, Vladimir G. and Zhang, Richard and Solomon, Justin},
- language = {en},
- month = {April},
  title = {Deep Parametric Shape Predictions using Distance Fields},
- url = {https://arxiv.org/abs/1904.08921},
- year = {2019}
+ booktitle={CVPR},
+ year={2020}
 }
