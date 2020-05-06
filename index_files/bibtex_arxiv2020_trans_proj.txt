@@ -1,5 +1,5 @@
 @inproceedings{huh2020trans,
-  title={Transforming and Projecting Images to Class-conditional Generative Networks},
+  title={Transforming and Projecting Images into Class-conditional Generative Networks},
   author={Huh, Minyoung and Zhang, Richard and Yan, Jun Zhu and Paris, Sylvain and Hertzmann, Aaron},
   booktitle={arXiv},
   year={2020}
