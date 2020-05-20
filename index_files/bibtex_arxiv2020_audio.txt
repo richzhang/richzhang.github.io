@@ -1,6 +1,6 @@
 @inproceedings{manocha2020perceptual,
   title={A Differentiable Perceptual Audio Metric Learned from Just Noticeable Differences},
-  author={Manocha, Pranay and Finkelstein, Adam and Bryan, Nicholas J. and Zhang, Richard and Mysore, Gautham J.},
+  author={Manocha, Pranay and Finkelstein, Adam and Zhang, Richard and Bryan, Nicholas J. and Mysore, Gautham J. and Jin, Zeyu},
   booktitle={arXiv},
   year={2020}
 }
