@@ -1,0 +1,6 @@
+@article{fish2020morph,
+  title={Image Morphing with Perceptual Constraints and STN Alignment},
+  author={Fish, Noa and Zhang, Richard and Perry, Lilach and Cohen-Or, Daniel and Shechtman, Eli and Barnes, Connelly},
+  journal={Computer Graphics Forum (CGF)},
+  year={2020}
+}
