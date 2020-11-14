@@ -1,0 +1,6 @@
+@incollection{li2020fewshot,
+title = {Few-shot Image Generation with Elastic Weight Consolidation},
+author = {Li, Yijun and Zhang, Richard and Lu, Jingwan and Shechtman, Eli},
+booktitle = {Advances in Neural Information Processing Systems},
+year = {2020}
+}
