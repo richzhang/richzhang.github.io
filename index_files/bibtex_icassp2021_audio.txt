@@ -1,0 +1,6 @@
+@inproceedings{Manocha:2021:CCL,
+   author = "Pranay Manocha and Zeyu Jin and Richard Zhang and Adam Finkelstein",
+   title = "{CDPAM}: Contrastive learning for perceptual audio similarity",
+   booktitle = "ICASSP 2021",
+   year = "2021"
+}
