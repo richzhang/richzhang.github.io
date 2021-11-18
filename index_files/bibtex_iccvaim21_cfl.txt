@@ -1,0 +1,6 @@
+@inproceedings{andonian2021contrastive,
+  title={Contrastive Feature Loss for Image Prediction},
+  author={Andonian, Alex and Park, Taesung and Russell, Bryan and Isola, Phillip and Zhu, Jun-Yan and Zhang, Richard},
+  booktitle={ICCV AIM Workshop},
+  year={2021}
+}
