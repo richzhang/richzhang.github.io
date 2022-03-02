@@ -1,6 +1,6 @@
-@inproceedings{kumari2021ensembling,
+@inproceedings{kumari2022ensembling,
   title={Ensembling Off-the-shelf Models for GAN Training},
   author={Kumari, Nupur and Zhang, Richard and Shechtman, Eli and Zhu, Jun-Yan},
-  booktitle={arXiv},
-  year={2021}
+  booktitle={CVPR},
+  year={2022}
 }
