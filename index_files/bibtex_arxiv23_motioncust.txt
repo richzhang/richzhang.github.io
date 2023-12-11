@@ -1,0 +1,6 @@
+@inproceedings{materzynska2023customizing,
+  title={Customizing Motion in Text-to-Video Diffusion Models},
+  author={Materzy\'nska, Joanna and Sivic, Josef and Shechtman, Eli and Torralba, Antonio and Zhang, Richard and Russell, Bryan},
+  booktitle={arXiv preprint arXiv:2312.04966},
+  year={2023}
+}
