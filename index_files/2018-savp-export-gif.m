@@ -8,9 +8,9 @@ for n = 1:10
     im = im(37:100,109:364,:);
     [imind,cm] = rgb2ind(im,256);
       if n == 1 
-          imwrite(imind,cm,'savp3.gif','gif', 'DelayTime', .2, 'Loopcount',inf); 
+          imwrite(imind,cm,'2018-savp-original.gif','gif', 'DelayTime', .2, 'Loopcount',inf);
       else 
-          imwrite(imind,cm,'savp3.gif','gif','DelayTime',.2, 'WriteMode','append'); 
+          imwrite(imind,cm,'2018-savp-original.gif','gif','DelayTime',.2, 'WriteMode','append');
       end 
 end
 
