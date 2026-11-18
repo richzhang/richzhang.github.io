@@ -2,7 +2,7 @@
   "version": 1,
   "status": "approved",
   "source": "index.html",
-  "scope": "The 74 entries in Publications; excludes the separate thesis entry.",
+  "scope": "The 78 entries in Publications; excludes the separate thesis entry.",
   "tagging_policy": {
     "editing": "Edit publication-topics.csv: each keyword has its own column, with x for applicable keywords and blanks otherwise. Keep id, year, and title unchanged, then run python3 update-publication-topics.py to regenerate the JSON and browser data. Parent categories are included automatically.",
     "overlap": "Papers may have multiple tags. Tags describe central contributions, core techniques, or the systems being studied, rather than every ingredient used.",
@@ -14,7 +14,7 @@
     "personalization_customization_few_shot_generation": "Adapting generation to particular subjects, concepts, domains, styles, or motions, and learning generation from limited examples. These overlapping capabilities share one keyword.",
     "video_generation": "Includes video synthesis, video prediction, and world models.",
     "diffusion_flow_matching": "One keyword covers diffusion models, flow-matching models, and hybrid formulations.",
-    "broad_modalities": "Image covers still-image generation, editing, analysis, and image-based geometry; Audio and Video retain their dedicated scopes. Modalities can overlap.",
+    "broad_modalities": "Image covers still-image generation, editing, analysis, and image-based geometry; Audio, Video, and Language retain their dedicated scopes. Modalities can overlap.",
     "understanding_models": "Discriminative prediction and analysis: recognition/classification, detection, segmentation, alignment/shape regression, learned similarity metrics, and representation learning intended for perception. Curated independently: a generative paper does not qualify merely because it uses a feature encoder, representation alignment, a vision-language model, or a GAN discriminator. May overlap with Generative models when discriminative learning or evaluation is a central contribution.",
     "distillation_efficiency": "Combines generative teacher-to-student distillation with central improvements to training or inference computation, memory, or latency. Includes few-step models; not synonymous with few-shot data efficiency.",
     "perceptual_metrics": "Combines perceptual models and evaluation metrics. Excludes Evaluating Data Attribution and Diffusion2GAN, whose main contributions are not metrics."
@@ -143,6 +143,13 @@
       "parents": []
     },
     {
+      "id": "language",
+      "label": "Language",
+      "group": "tasks",
+      "origin": "user",
+      "parents": []
+    },
+    {
       "id": "neural-fields",
       "label": "Neural fields",
       "group": "models-methods",
@@ -235,6 +242,70 @@
       "notes": "Uses rectified flow, but explicitly does not require adversarial losses.",
       "evidence_urls": [
         "https://arxiv.org/html/2603.22283v1"
+      ]
+    },
+    {
+      "id": "2026-latent-lattice",
+      "year": 2026,
+      "title": "Latent Lattice Language Models",
+      "tags": [
+        "autoregressive-models",
+        "generative-models",
+        "language",
+        "representation-learning"
+      ],
+      "evidence_urls": [
+        "https://arxiv.org/abs/2611.21608",
+        "https://shivamduggal4.github.io/latent-lattice-language-models/"
+      ]
+    },
+    {
+      "id": "2026-critic-matters",
+      "year": 2026,
+      "title": "A Better Critic Matters for Distribution Matching Distillation",
+      "tags": [
+        "diffusion-flow-matching",
+        "distillation-efficiency",
+        "generative-models",
+        "image"
+      ],
+      "evidence_urls": [
+        "https://arxiv.org/abs/2610.42135",
+        "https://peppaking8.github.io/critic-matters/"
+      ]
+    },
+    {
+      "id": "2026-editstream",
+      "year": 2026,
+      "title": "EditStream: A Unified Autoregressive Framework for Interactive Video Generation and Editing",
+      "tags": [
+        "autoregressive-models",
+        "diffusion-flow-matching",
+        "distillation-efficiency",
+        "generative-models",
+        "interaction",
+        "video-generation"
+      ],
+      "evidence_urls": [
+        "https://arxiv.org/abs/2608.21424",
+        "https://real-time-video-research.github.io/editstream/"
+      ]
+    },
+    {
+      "id": "2026-vid2vid-long",
+      "year": 2026,
+      "title": "Consistent Video-to-Video Translation via Explicit Correspondences",
+      "tags": [
+        "autoregressive-models",
+        "diffusion-flow-matching",
+        "distillation-efficiency",
+        "generative-models",
+        "interaction",
+        "video-generation"
+      ],
+      "evidence_urls": [
+        "https://arxiv.org/abs/2611.17298",
+        "https://www.cs.cmu.edu/~vid2vid-long/"
       ]
     },
     {
