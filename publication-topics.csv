@@ -39,7 +39,7 @@ id,year,title,(Perceptual) Metrics,3D & geometry,Audio,Autoregressive models,Cus
 2023-custom-diffusion,2023,Multi-Concept Customization of Text-to-Image Diffusion,,,,,x,,x,,,,x,x,x,,,,,,,,,
 2023-domain-expansion,2023,Domain Expansion of Image Generators,,,,,x,,,,,x,x,,x,,,,,x,,,,
 2023-low-rank-simplicity,2023,The Low-Rank Simplicity Bias in Deep Networks,,,,,,,,,,,,,x,,,,,x,,,x,
-2022-anyres-gan,2022,Any-resolution Training for High-resolution Image Synthesis,,,,,,,,,,x,x,,x,,,,,,,,,
+2022-anyres-gan,2022,Any-resolution Training for High-resolution Image Synthesis,,,,,,,,,,x,x,,x,,,,,,,x,,
 2022-blobgan,2022,BlobGAN: Spatially Disentangled Scene Representations,,,,,,,,,,x,x,,x,,x,,,x,,,,
 2022-3d-fm-gan,2022,3D-FM GAN: Towards 3D-Controllable Face Manipulation,,x,,,,,,,,x,x,,x,x,x,,,,,,,
 2022-asset,2022,ASSET: Autoregressive Semantic Scene Editing with Transformers at High Resolutions,,,,x,,,,,,,x,,x,x,x,,,,,,,
