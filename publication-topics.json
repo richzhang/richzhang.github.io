@@ -1,0 +1,1090 @@
+{
+  "version": 1,
+  "status": "approved",
+  "source": "index.html",
+  "scope": "The 74 entries in Publications; excludes the separate thesis entry.",
+  "tagging_policy": {
+    "editing": "Edit publication-topics.csv: each keyword has its own column, with x for applicable keywords and blanks otherwise. Keep id, year, and title unchanged, then run python3 update-publication-topics.py to regenerate the JSON and browser data. Parent categories are included automatically.",
+    "overlap": "Papers may have multiple tags. Tags describe central contributions, core techniques, or the systems being studied, rather than every ingredient used.",
+    "inheritance": "Paper tags explicitly include declared parent tags, except per-paper excluded_parent_tags, so filters can use direct membership checks. Exclusions prevent automatic inheritance but do not override explicit CSV assignments.",
+    "generative_models": "Umbrella for generative methods and work directly studying generative systems. GANs, diffusion, flow matching, and autoregressive generation imply this tag.",
+    "responsible_genai": "Umbrella covering data attribution, detection/image forensics, and unlearning/concept erasure.",
+    "interaction": "Human-directed controls or an explicitly interactive workflow; not simply attention or interaction between generated samples.",
+    "topic_approval": "All listed topics are approved and may overlap. Topic origin records whether a topic came from the user or an assistant suggestion, not its approval status.",
+    "personalization_customization_few_shot_generation": "Adapting generation to particular subjects, concepts, domains, styles, or motions, and learning generation from limited examples. These overlapping capabilities share one keyword.",
+    "video_generation": "Includes video synthesis, video prediction, and world models.",
+    "diffusion_flow_matching": "One keyword covers diffusion models, flow-matching models, and hybrid formulations.",
+    "broad_modalities": "Image covers still-image generation, editing, analysis, and image-based geometry; Audio and Video retain their dedicated scopes. Modalities can overlap.",
+    "understanding_models": "Discriminative prediction and analysis: recognition/classification, detection, segmentation, alignment/shape regression, learned similarity metrics, and representation learning intended for perception. Curated independently: a generative paper does not qualify merely because it uses a feature encoder, representation alignment, a vision-language model, or a GAN discriminator. May overlap with Generative models when discriminative learning or evaluation is a central contribution.",
+    "distillation_efficiency": "Combines generative teacher-to-student distillation with central improvements to training or inference computation, memory, or latency. Includes few-step models; not synonymous with few-shot data efficiency.",
+    "perceptual_metrics": "Combines perceptual models and evaluation metrics. Excludes Evaluating Data Attribution and Diffusion2GAN, whose main contributions are not metrics."
+  },
+  "groups": {
+    "models-methods": "Models and methods",
+    "tasks": "Tasks and applications",
+    "capabilities": "Capabilities",
+    "foundations": "Learning and evaluation",
+    "collections": "Collections"
+  },
+  "topics": [
+    {
+      "id": "perceptual-metrics",
+      "label": "(Perceptual) Metrics",
+      "group": "foundations",
+      "origin": "user",
+      "parents": []
+    },
+    {
+      "id": "geometry-3d",
+      "label": "3D & geometry",
+      "group": "tasks",
+      "origin": "assistant",
+      "parents": []
+    },
+    {
+      "id": "audio",
+      "label": "Audio",
+      "group": "tasks",
+      "origin": "assistant",
+      "parents": []
+    },
+    {
+      "id": "autoregressive-models",
+      "label": "Autoregressive models",
+      "group": "models-methods",
+      "origin": "assistant",
+      "parents": [
+        "generative-models"
+      ]
+    },
+    {
+      "id": "personalization-customization-few-shot-generation",
+      "label": "Customization/Few-shot gen",
+      "group": "capabilities",
+      "origin": "user",
+      "parents": []
+    },
+    {
+      "id": "data-attribution",
+      "label": "Data attribution",
+      "group": "tasks",
+      "origin": "user",
+      "parents": [
+        "responsible-genai"
+      ]
+    },
+    {
+      "id": "diffusion-flow-matching",
+      "label": "Diffusion & Flow matching",
+      "group": "models-methods",
+      "origin": "user",
+      "parents": [
+        "generative-models"
+      ]
+    },
+    {
+      "id": "distillation-efficiency",
+      "label": "Distillation/Efficiency",
+      "group": "capabilities",
+      "origin": "user",
+      "parents": []
+    },
+    {
+      "id": "image-forensics",
+      "label": "Forensics",
+      "group": "tasks",
+      "origin": "user",
+      "parents": [
+        "responsible-genai"
+      ]
+    },
+    {
+      "id": "gans",
+      "label": "GANs",
+      "group": "models-methods",
+      "origin": "user",
+      "parents": [
+        "generative-models"
+      ]
+    },
+    {
+      "id": "generative-models",
+      "label": "Generative models",
+      "group": "models-methods",
+      "origin": "user",
+      "parents": []
+    },
+    {
+      "id": "highlights",
+      "label": "Highlights",
+      "group": "collections",
+      "origin": "user",
+      "parents": []
+    },
+    {
+      "id": "image",
+      "label": "Image",
+      "group": "tasks",
+      "origin": "user",
+      "parents": []
+    },
+    {
+      "id": "image-editing",
+      "label": "Image editing",
+      "group": "tasks",
+      "origin": "user",
+      "parents": []
+    },
+    {
+      "id": "interaction",
+      "label": "Interactive editing",
+      "group": "capabilities",
+      "origin": "user",
+      "parents": []
+    },
+    {
+      "id": "neural-fields",
+      "label": "Neural fields",
+      "group": "models-methods",
+      "origin": "assistant",
+      "parents": []
+    },
+    {
+      "id": "representation-learning",
+      "label": "Representations",
+      "group": "foundations",
+      "origin": "user",
+      "parents": []
+    },
+    {
+      "id": "responsible-genai",
+      "label": "Responsible GenAI",
+      "group": "tasks",
+      "origin": "user",
+      "parents": []
+    },
+    {
+      "id": "signal-processing",
+      "label": "Signal processing",
+      "group": "foundations",
+      "origin": "user",
+      "parents": []
+    },
+    {
+      "id": "understanding-models",
+      "label": "Understanding models",
+      "group": "models-methods",
+      "origin": "user",
+      "parents": []
+    },
+    {
+      "id": "video-generation",
+      "label": "Video generation",
+      "group": "tasks",
+      "origin": "user",
+      "parents": []
+    }
+  ],
+  "papers": [
+    {
+      "id": "2026-tpips",
+      "year": 2026,
+      "title": "The Many Senses of Visual Similarity: A Text-Prompted Image Perceptual Metric",
+      "tags": [
+        "perceptual-metrics",
+        "image",
+        "representation-learning",
+        "understanding-models"
+      ]
+    },
+    {
+      "id": "2026-raev2",
+      "year": 2026,
+      "title": "Improved Baselines with Representation Autoencoders",
+      "tags": [
+        "diffusion-flow-matching",
+        "distillation-efficiency",
+        "generative-models",
+        "image",
+        "representation-learning"
+      ],
+      "evidence_urls": [
+        "https://arxiv.org/html/2605.18324v2"
+      ]
+    },
+    {
+      "id": "2026-unite",
+      "year": 2026,
+      "title": "End-to-End Training for Unified Tokenization and Latent Denoising",
+      "tags": [
+        "diffusion-flow-matching",
+        "generative-models",
+        "image",
+        "representation-learning"
+      ],
+      "notes": "Uses rectified flow, but explicitly does not require adversarial losses.",
+      "evidence_urls": [
+        "https://arxiv.org/html/2603.22283v1"
+      ]
+    },
+    {
+      "id": "2026-diffusibility-high-dimensional-latents",
+      "year": 2026,
+      "title": "On the Diffusibility of High-Dimensional Latents",
+      "tags": [
+        "diffusion-flow-matching",
+        "generative-models",
+        "image",
+        "representation-learning"
+      ],
+      "evidence_urls": [
+        "https://cfeng16.github.io/on_the_diffusibility/"
+      ]
+    },
+    {
+      "id": "2026-id-sim",
+      "year": 2026,
+      "title": "ID-Sim: An Identity-Focused Similarity Metric",
+      "tags": [
+        "perceptual-metrics",
+        "image",
+        "representation-learning",
+        "understanding-models"
+      ]
+    },
+    {
+      "id": "2026-self-e",
+      "year": 2026,
+      "title": "Self-Evaluation Unlocks Any-Step Text-to-Image Generation",
+      "tags": [
+        "diffusion-flow-matching",
+        "distillation-efficiency",
+        "generative-models",
+        "image"
+      ],
+      "notes": "Trained from scratch with a flow-matching-like local objective and global distribution matching; not teacher distillation.",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2512.22374"
+      ]
+    },
+    {
+      "id": "2026-group-diffusion",
+      "year": 2026,
+      "title": "Group Diffusion: Enhancing Image Generation by Unlocking Cross-Sample Collaboration",
+      "tags": [
+        "diffusion-flow-matching",
+        "generative-models",
+        "image"
+      ],
+      "notes": "Cross-sample collaboration is not human interaction."
+    },
+    {
+      "id": "2026-qare",
+      "year": 2026,
+      "title": "Towards Text-Guided Attribute-Disentangled Multimodal Representation Learning",
+      "tags": [
+        "perceptual-metrics",
+        "image",
+        "representation-learning",
+        "understanding-models"
+      ]
+    },
+    {
+      "id": "2026-motionstream",
+      "year": 2026,
+      "title": "MotionStream: Real-Time Video Generation with Interactive Motion Controls",
+      "tags": [
+        "autoregressive-models",
+        "diffusion-flow-matching",
+        "distillation-efficiency",
+        "generative-models",
+        "interaction",
+        "video-generation"
+      ],
+      "notes": "The teacher uses rectified flow matching; Self Forcing-style DMD produces a few-step causal student.",
+      "evidence_urls": [
+        "https://arxiv.org/html/2511.01266v5"
+      ]
+    },
+    {
+      "id": "2026-irepa",
+      "year": 2026,
+      "title": "What matters for Representation Alignment: Global Information or Spatial Structure?",
+      "tags": [
+        "diffusion-flow-matching",
+        "distillation-efficiency",
+        "generative-models",
+        "image",
+        "representation-learning"
+      ],
+      "evidence_urls": [
+        "https://end2end-diffusion.github.io/irepa/"
+      ]
+    },
+    {
+      "id": "2026-np-edit",
+      "year": 2026,
+      "title": "NP-Edit: Learning an Image Editing Model without Image Editing Pairs",
+      "tags": [
+        "diffusion-flow-matching",
+        "distillation-efficiency",
+        "generative-models",
+        "image",
+        "image-editing"
+      ]
+    },
+    {
+      "id": "2026-x-planner",
+      "year": 2026,
+      "title": "Beyond Simple Edits: X-Planner for Complex Instruction-Based Image Editing",
+      "tags": [
+        "diffusion-flow-matching",
+        "generative-models",
+        "image",
+        "image-editing",
+        "interaction"
+      ]
+    },
+    {
+      "id": "2025-fast-data-attribution",
+      "year": 2025,
+      "title": "Fast Data Attribution for Text-to-Image Models",
+      "tags": [
+        "data-attribution",
+        "diffusion-flow-matching",
+        "distillation-efficiency",
+        "generative-models",
+        "image",
+        "responsible-genai"
+      ]
+    },
+    {
+      "id": "2025-long-context-world-models",
+      "year": 2025,
+      "title": "Long-Context State-Space Video World Models",
+      "tags": [
+        "autoregressive-models",
+        "diffusion-flow-matching",
+        "distillation-efficiency",
+        "generative-models",
+        "video-generation"
+      ]
+    },
+    {
+      "id": "2025-sliderspace",
+      "year": 2025,
+      "title": "SliderSpace: Decomposing the Visual Capabilities of Diffusion Models",
+      "tags": [
+        "diffusion-flow-matching",
+        "generative-models",
+        "image",
+        "image-editing",
+        "interaction",
+        "representation-learning"
+      ],
+      "evidence_urls": [
+        "https://sliderspace.baulab.info/"
+      ]
+    },
+    {
+      "id": "2025-causvid",
+      "year": 2025,
+      "title": "From Slow Bidirectional to Fast Causal Video Generators",
+      "tags": [
+        "autoregressive-models",
+        "diffusion-flow-matching",
+        "distillation-efficiency",
+        "generative-models",
+        "highlights",
+        "interaction",
+        "video-generation"
+      ]
+    },
+    {
+      "id": "2025-videogigagan",
+      "year": 2025,
+      "title": "VideoGigaGAN: Towards Detail-rich Video Super-Resolution",
+      "tags": [
+        "gans",
+        "generative-models",
+        "video-generation"
+      ]
+    },
+    {
+      "id": "2025-stereoscopic-image-quality",
+      "year": 2025,
+      "title": "What Makes for a Good Stereoscopic Image?",
+      "tags": [
+        "perceptual-metrics",
+        "geometry-3d",
+        "image",
+        "understanding-models"
+      ]
+    },
+    {
+      "id": "2024-attribution-by-unlearning",
+      "year": 2024,
+      "title": "Data Attribution for Text-to-Image Models by Unlearning Synthesized Images",
+      "tags": [
+        "data-attribution",
+        "diffusion-flow-matching",
+        "generative-models",
+        "image",
+        "responsible-genai"
+      ]
+    },
+    {
+      "id": "2024-dmd2",
+      "year": 2024,
+      "title": "Improved Distribution Matching Distillation for Fast Image Synthesis",
+      "tags": [
+        "diffusion-flow-matching",
+        "distillation-efficiency",
+        "gans",
+        "generative-models",
+        "image"
+      ],
+      "notes": "Includes GANs because adversarial training with a real-image discriminator is a central part of the distillation method."
+    },
+    {
+      "id": "2024-custom-diffusion-360",
+      "year": 2024,
+      "title": "Customizing Text-to-Image Diffusion with Camera Viewpoint Control",
+      "tags": [
+        "geometry-3d",
+        "personalization-customization-few-shot-generation",
+        "diffusion-flow-matching",
+        "generative-models",
+        "image",
+        "image-editing",
+        "interaction"
+      ]
+    },
+    {
+      "id": "2024-newmove",
+      "year": 2024,
+      "title": "NewMove: Customizing text-to-video models with novel motions",
+      "tags": [
+        "personalization-customization-few-shot-generation",
+        "diffusion-flow-matching",
+        "generative-models",
+        "video-generation"
+      ]
+    },
+    {
+      "id": "2024-turboedit",
+      "year": 2024,
+      "title": "TurboEdit: Instant text-based image editing",
+      "tags": [
+        "diffusion-flow-matching",
+        "distillation-efficiency",
+        "generative-models",
+        "image",
+        "image-editing",
+        "interaction"
+      ]
+    },
+    {
+      "id": "2024-diffusion2gan",
+      "year": 2024,
+      "title": "Diffusion2GAN: Distilling Diffusion Models into Conditional GANs",
+      "tags": [
+        "diffusion-flow-matching",
+        "distillation-efficiency",
+        "gans",
+        "generative-models",
+        "image"
+      ],
+      "notes": "A diffusion teacher is distilled into a GAN student; E-LatentLPIPS is a central perceptual-loss contribution.",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2405.05967"
+      ]
+    },
+    {
+      "id": "2024-editable-image-elements",
+      "year": 2024,
+      "title": "Editable Image Elements for Controllable Synthesis",
+      "tags": [
+        "diffusion-flow-matching",
+        "generative-models",
+        "image",
+        "image-editing",
+        "interaction",
+        "representation-learning"
+      ]
+    },
+    {
+      "id": "2024-lazy-diffusion",
+      "year": 2024,
+      "title": "Lazy Diffusion Transformer for Interactive Image Editing",
+      "tags": [
+        "diffusion-flow-matching",
+        "distillation-efficiency",
+        "generative-models",
+        "image",
+        "image-editing",
+        "interaction"
+      ]
+    },
+    {
+      "id": "2024-diffusion-experts",
+      "year": 2024,
+      "title": "Mixture of Efficient Diffusion Experts Through Automatic Interval and Sub-Network Selection",
+      "tags": [
+        "diffusion-flow-matching",
+        "distillation-efficiency",
+        "generative-models",
+        "image"
+      ]
+    },
+    {
+      "id": "2024-dmd",
+      "year": 2024,
+      "title": "One-step Diffusion with Distribution Matching Distillation",
+      "tags": [
+        "diffusion-flow-matching",
+        "distillation-efficiency",
+        "generative-models",
+        "highlights",
+        "image"
+      ]
+    },
+    {
+      "id": "2024-personalized-residuals",
+      "year": 2024,
+      "title": "Personalized Residuals for Concept-Driven Text-to-Image Generation",
+      "tags": [
+        "personalization-customization-few-shot-generation",
+        "diffusion-flow-matching",
+        "distillation-efficiency",
+        "generative-models",
+        "image"
+      ]
+    },
+    {
+      "id": "2024-infd",
+      "year": 2024,
+      "title": "Image Neural Field Diffusion Models",
+      "tags": [
+        "diffusion-flow-matching",
+        "generative-models",
+        "image",
+        "neural-fields",
+        "representation-learning"
+      ],
+      "notes": "Image neural fields are not automatically 3D; neural fields and 3D geometry are separate topics."
+    },
+    {
+      "id": "2024-jump-cut-smoothing",
+      "year": 2024,
+      "title": "Jump Cut Smoothing for Talking Heads",
+      "tags": [
+        "generative-models",
+        "video-generation"
+      ]
+    },
+    {
+      "id": "2023-dreamsim",
+      "year": 2023,
+      "title": "DreamSim: Learning New Dimensions of Human Visual Similarity using Synthetic Data",
+      "tags": [
+        "perceptual-metrics",
+        "image",
+        "representation-learning",
+        "understanding-models"
+      ]
+    },
+    {
+      "id": "2023-evaluating-data-attribution",
+      "year": 2023,
+      "title": "Evaluating Data Attribution for Text-to-Image Models",
+      "tags": [
+        "data-attribution",
+        "diffusion-flow-matching",
+        "generative-models",
+        "highlights",
+        "image",
+        "responsible-genai"
+      ]
+    },
+    {
+      "id": "2023-concept-ablation",
+      "year": 2023,
+      "title": "Ablating Concepts in Text-to-Image Diffusion Models",
+      "tags": [
+        "diffusion-flow-matching",
+        "generative-models",
+        "highlights",
+        "image",
+        "responsible-genai"
+      ]
+    },
+    {
+      "id": "2023-online-genai-detection",
+      "year": 2023,
+      "title": "Online Detection of AI-Generated Images",
+      "tags": [
+        "image-forensics",
+        "image",
+        "responsible-genai",
+        "understanding-models"
+      ]
+    },
+    {
+      "id": "2023-pix2pix-zero",
+      "year": 2023,
+      "title": "Zero-shot Image-to-Image Translation",
+      "tags": [
+        "diffusion-flow-matching",
+        "generative-models",
+        "image",
+        "image-editing"
+      ]
+    },
+    {
+      "id": "2023-gigagan",
+      "year": 2023,
+      "title": "Scaling up GANs for Text-to-Image Synthesis",
+      "tags": [
+        "distillation-efficiency",
+        "gans",
+        "generative-models",
+        "image"
+      ],
+      "evidence_urls": [
+        "https://mingukkang.github.io/GigaGAN/"
+      ]
+    },
+    {
+      "id": "2023-custom-diffusion",
+      "year": 2023,
+      "title": "Multi-Concept Customization of Text-to-Image Diffusion",
+      "tags": [
+        "personalization-customization-few-shot-generation",
+        "diffusion-flow-matching",
+        "generative-models",
+        "highlights",
+        "image"
+      ]
+    },
+    {
+      "id": "2023-domain-expansion",
+      "year": 2023,
+      "title": "Domain Expansion of Image Generators",
+      "tags": [
+        "personalization-customization-few-shot-generation",
+        "gans",
+        "generative-models",
+        "image",
+        "representation-learning"
+      ]
+    },
+    {
+      "id": "2023-low-rank-simplicity",
+      "year": 2023,
+      "title": "The Low-Rank Simplicity Bias in Deep Networks",
+      "tags": [
+        "image",
+        "representation-learning",
+        "understanding-models"
+      ]
+    },
+    {
+      "id": "2022-anyres-gan",
+      "year": 2022,
+      "title": "Any-resolution Training for High-resolution Image Synthesis",
+      "tags": [
+        "gans",
+        "generative-models",
+        "image"
+      ]
+    },
+    {
+      "id": "2022-blobgan",
+      "year": 2022,
+      "title": "BlobGAN: Spatially Disentangled Scene Representations",
+      "tags": [
+        "gans",
+        "generative-models",
+        "image",
+        "interaction",
+        "representation-learning"
+      ]
+    },
+    {
+      "id": "2022-3d-fm-gan",
+      "year": 2022,
+      "title": "3D-FM GAN: Towards 3D-Controllable Face Manipulation",
+      "tags": [
+        "geometry-3d",
+        "gans",
+        "generative-models",
+        "image",
+        "image-editing",
+        "interaction"
+      ]
+    },
+    {
+      "id": "2022-asset",
+      "year": 2022,
+      "title": "ASSET: Autoregressive Semantic Scene Editing with Transformers at High Resolutions",
+      "tags": [
+        "autoregressive-models",
+        "generative-models",
+        "image",
+        "image-editing",
+        "interaction"
+      ]
+    },
+    {
+      "id": "2022-gangealing",
+      "year": 2022,
+      "title": "GAN-Supervised Dense Visual Alignment",
+      "tags": [
+        "geometry-3d",
+        "gans",
+        "generative-models",
+        "image",
+        "representation-learning",
+        "understanding-models"
+      ]
+    },
+    {
+      "id": "2022-vision-aided-gan",
+      "year": 2022,
+      "title": "Ensembling Off-the-shelf Models for GAN Training",
+      "tags": [
+        "personalization-customization-few-shot-generation",
+        "gans",
+        "generative-models",
+        "image",
+        "representation-learning"
+      ]
+    },
+    {
+      "id": "2022-sam-inversion",
+      "year": 2022,
+      "title": "Spatially-Adaptive Multilayer Selection for GAN Inversion and Editing",
+      "tags": [
+        "gans",
+        "generative-models",
+        "image",
+        "image-editing"
+      ]
+    },
+    {
+      "id": "2022-clean-fid",
+      "year": 2022,
+      "title": "On Aliased Resizing Libraries and Surprising Subtleties in FID Calculation",
+      "tags": [
+        "perceptual-metrics",
+        "generative-models",
+        "image",
+        "signal-processing"
+      ]
+    },
+    {
+      "id": "2021-editnerf",
+      "year": 2021,
+      "title": "Editing Conditional Radiance Fields",
+      "tags": [
+        "geometry-3d",
+        "generative-models",
+        "image",
+        "image-editing",
+        "interaction",
+        "neural-fields"
+      ]
+    },
+    {
+      "id": "2021-contrastive-feature-loss",
+      "year": 2021,
+      "title": "Contrastive Feature Loss for Image Prediction",
+      "tags": [
+        "perceptual-metrics",
+        "image",
+        "representation-learning",
+        "understanding-models"
+      ]
+    },
+    {
+      "id": "2021-gan-ensembling",
+      "year": 2021,
+      "title": "Ensembling with Deep Generative Views",
+      "tags": [
+        "gans",
+        "generative-models",
+        "image",
+        "representation-learning",
+        "understanding-models"
+      ]
+    },
+    {
+      "id": "2021-few-shot-cross-domain",
+      "year": 2021,
+      "title": "Few-shot Image Generation via Cross-domain Correspondence",
+      "tags": [
+        "personalization-customization-few-shot-generation",
+        "gans",
+        "generative-models",
+        "image"
+      ]
+    },
+    {
+      "id": "2021-anycost-gan",
+      "year": 2021,
+      "title": "Anycost GANs for Interactive Image Synthesis and Editing",
+      "tags": [
+        "distillation-efficiency",
+        "gans",
+        "generative-models",
+        "image",
+        "image-editing",
+        "interaction"
+      ]
+    },
+    {
+      "id": "2021-asapnet",
+      "year": 2021,
+      "title": "Spatially-Adaptive Pixelwise Networks for Fast Image Translation",
+      "tags": [
+        "distillation-efficiency",
+        "gans",
+        "generative-models",
+        "image",
+        "image-editing",
+        "neural-fields"
+      ]
+    },
+    {
+      "id": "2021-cdpam",
+      "year": 2021,
+      "title": "CDPAM: Contrastive Learning for Perceptual Audio Similarity",
+      "tags": [
+        "perceptual-metrics",
+        "audio",
+        "representation-learning",
+        "understanding-models"
+      ]
+    },
+    {
+      "id": "2020-swapping-autoencoder",
+      "year": 2020,
+      "title": "Swapping Autoencoder for Deep Image Manipulation",
+      "tags": [
+        "gans",
+        "generative-models",
+        "image",
+        "image-editing",
+        "interaction",
+        "representation-learning"
+      ]
+    },
+    {
+      "id": "2020-few-shot-ewc",
+      "year": 2020,
+      "title": "Few-shot Image Generation with Elastic Weight Consolidation",
+      "tags": [
+        "personalization-customization-few-shot-generation",
+        "gans",
+        "generative-models",
+        "image"
+      ]
+    },
+    {
+      "id": "2020-cut",
+      "year": 2020,
+      "title": "Contrastive Learning for Unpaired Image-to-Image Translation",
+      "tags": [
+        "gans",
+        "generative-models",
+        "image",
+        "image-editing",
+        "representation-learning"
+      ]
+    },
+    {
+      "id": "2020-pix2latent",
+      "year": 2020,
+      "title": "Transforming and Projecting Images into Class-conditional Generative Networks",
+      "tags": [
+        "gans",
+        "generative-models",
+        "image",
+        "image-editing"
+      ]
+    },
+    {
+      "id": "2020-dpam",
+      "year": 2020,
+      "title": "A Differentiable Perceptual Audio Metric Learned from Just Noticeable Differences",
+      "tags": [
+        "perceptual-metrics",
+        "audio",
+        "representation-learning",
+        "understanding-models"
+      ]
+    },
+    {
+      "id": "2020-cnndetect",
+      "year": 2020,
+      "title": "CNN-generated images are surprisingly easy to spot...for now",
+      "excluded_parent_tags": [
+        "generative-models"
+      ],
+      "tags": [
+        "image-forensics",
+        "gans",
+        "highlights",
+        "image",
+        "responsible-genai",
+        "understanding-models"
+      ]
+    },
+    {
+      "id": "2020-deep-parametric-shapes",
+      "year": 2020,
+      "title": "Deep Parametric Shape Predictions using Distance Fields",
+      "tags": [
+        "geometry-3d",
+        "image",
+        "representation-learning",
+        "understanding-models"
+      ]
+    },
+    {
+      "id": "2020-image-morphing",
+      "year": 2020,
+      "title": "Image Morphing with Perceptual Constraints and STN Alignment",
+      "tags": [
+        "geometry-3d",
+        "gans",
+        "generative-models",
+        "image"
+      ]
+    },
+    {
+      "id": "2019-antialiased-cnns",
+      "year": 2019,
+      "title": "Making Convolutional Networks Shift-Invariant Again",
+      "tags": [
+        "highlights",
+        "image",
+        "representation-learning",
+        "signal-processing",
+        "understanding-models"
+      ]
+    },
+    {
+      "id": "2019-photoshopped-faces",
+      "year": 2019,
+      "title": "Detecting Photoshopped Faces by Scripting Photoshop",
+      "tags": [
+        "image-forensics",
+        "image",
+        "responsible-genai",
+        "understanding-models"
+      ]
+    },
+    {
+      "id": "2019-sketch-fill",
+      "year": 2019,
+      "title": "Interactive Sketch & Fill: Multiclass Sketch-to-Image Translation",
+      "tags": [
+        "gans",
+        "generative-models",
+        "image",
+        "image-editing",
+        "interaction"
+      ]
+    },
+    {
+      "id": "2018-lpips",
+      "year": 2018,
+      "title": "The Unreasonable Effectiveness of Deep Features as a Perceptual Metric",
+      "tags": [
+        "perceptual-metrics",
+        "highlights",
+        "image",
+        "representation-learning",
+        "understanding-models"
+      ]
+    },
+    {
+      "id": "2018-savp",
+      "year": 2018,
+      "title": "Stochastic Adversarial Video Prediction",
+      "tags": [
+        "autoregressive-models",
+        "gans",
+        "generative-models",
+        "video-generation"
+      ]
+    },
+    {
+      "id": "2017-bicyclegan",
+      "year": 2017,
+      "title": "Toward Multimodal Image-to-Image Translation",
+      "tags": [
+        "gans",
+        "generative-models",
+        "image",
+        "image-editing"
+      ]
+    },
+    {
+      "id": "2017-interactive-colorization",
+      "year": 2017,
+      "title": "Real-Time User-Guided Image Colorization with Learned Deep Priors",
+      "tags": [
+        "generative-models",
+        "image",
+        "image-editing",
+        "interaction"
+      ]
+    },
+    {
+      "id": "2017-split-brain",
+      "year": 2017,
+      "title": "Split-Brain Autoencoders: Unsupervised Learning by Cross-Channel Prediction",
+      "tags": [
+        "image",
+        "representation-learning",
+        "understanding-models"
+      ]
+    },
+    {
+      "id": "2016-colorization",
+      "year": 2016,
+      "title": "Colorful Image Colorization",
+      "tags": [
+        "generative-models",
+        "highlights",
+        "image",
+        "image-editing",
+        "representation-learning",
+        "understanding-models"
+      ]
+    },
+    {
+      "id": "2015-sensor-fusion",
+      "year": 2015,
+      "title": "Sensor Fusion for Semantic Segmentation of Urban Scenes",
+      "tags": [
+        "geometry-3d",
+        "image",
+        "understanding-models"
+      ]
+    },
+    {
+      "id": "2014-window-regions",
+      "year": 2014,
+      "title": "Automatic Identification of Window Regions on Indoor Point Clouds Using LiDAR and Cameras",
+      "tags": [
+        "geometry-3d",
+        "image",
+        "understanding-models"
+      ]
+    }
+  ]
+}

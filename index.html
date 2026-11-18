@@ -3,6 +3,28 @@
     <meta charset="utf-8">
     <title>Richard Zhang - Research Scientist, Adobe Research</title>
     <style>
+        :root {
+            view-transition-name: none;
+        }
+        ::view-transition {
+            pointer-events: none;
+        }
+        ::view-transition-group(*) {
+            animation-duration: 300ms;
+            animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+        ::view-transition-old(*):only-child {
+            animation: publication-exit 180ms ease-out both;
+        }
+        ::view-transition-new(*):only-child {
+            animation: publication-enter 260ms ease-out both;
+        }
+        @keyframes publication-exit {
+            to { opacity: 0; transform: translateY(-8px); }
+        }
+        @keyframes publication-enter {
+            from { opacity: 0; transform: translateY(10px); }
+        }
         .award-icon {
             position: relative;
             display: inline-block;
@@ -26,7 +48,85 @@
             white-space: nowrap;
             z-index: 10;
         }
+        .publication-heading {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px 14px;
+            margin: 0.83em 0;
+            font-family: helvetica, arial, sans-serif;
+        }
+        .publication-heading h2 {
+            flex-basis: 100%;
+            margin: 0;
+        }
+        #publication-filter:not([hidden]), .publication-topics {
+            display: contents;
+        }
+        .publication-topics-primary {
+            display: flex;
+            flex: 1;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 6px;
+        }
+        .publication-topics button {
+            padding: 4px 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background: #fff;
+            color: #333;
+            font: inherit;
+            font-size: 10pt;
+            cursor: pointer;
+        }
+        .publication-topics-secondary {
+            display: flex;
+            flex-basis: 100%;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .publication-topics-secondary button {
+            padding: 3px 6px;
+            font-size: 9pt;
+        }
+        .publication-topics button:hover {
+            background: #f0f3f6;
+        }
+        .publication-topics button[aria-pressed="true"] {
+            border-color: #315c85;
+            background: #315c85;
+            color: #fff;
+        }
+        .publication-topics button:focus-visible {
+            outline: 2px solid #315c85;
+            outline-offset: 2px;
+        }
+        .publication-topic-separator {
+            align-self: center;
+            padding: 0 2px;
+            color: #888;
+            font-size: 14pt;
+        }
+        .publication-topic-count {
+            font-size: 0.8em;
+            opacity: 0.8;
+        }
+        #publication-count {
+            flex-basis: 100%;
+            margin: 0;
+            color: #555;
+            font-size: 10pt;
+        }
+        .publication-year th {
+            padding: 14px 0 2px;
+            text-align: left;
+            font-size: 16pt;
+            font-weight: 600;
+        }
     </style>
+    <script src="publication-topics-data.js" defer></script>
+    <script src="publication-filter.js" defer></script>
 </head>
 <body>
 <table border="0" width="1100px" align="center"><tbody><tr><td></td><td valign="top">
@@ -148,10 +248,19 @@
  -->
         </p><hr size="2" align="left" noshade="">
 
-        <h2>Publications </h2>
+        <div class="publication-heading">
+            <h2>Publications</h2>
+            <div id="publication-filter" hidden>
+                <div class="publication-topics" role="group" aria-label="Filter publications by topic"></div>
+                <p id="publication-count" role="status" aria-live="polite"></p>
+            </div>
+        </div>
         <font face="helvetica, ariel, &#39;sans serif&#39;">
-            <table cellspacing="15">
-				<tbody>
+            <table id="publications" cellspacing="15">
+                <tbody data-year="2026">
+                <tr class="publication-year">
+                    <th colspan="2" scope="rowgroup">2026</th>
+                </tr>
                 <tr>
                     <td width="30%" align=center>
                         <img width="225" align="center" src="index_files/optimized/2026-tpips.webp" border="0"> &nbsp;
@@ -442,6 +551,11 @@
                         <br>
                     </td>
                 </tr>
+                </tbody>
+                <tbody data-year="2025">
+                <tr class="publication-year">
+                    <th colspan="2" scope="rowgroup">2025</th>
+                </tr>
                 <tr>
                     <td width="30%" align=center>
                         <img width="175" align="center" src="https://peterwang512.github.io/index_files/fastgda.jpg" border="0"> &nbsp;
@@ -584,6 +698,11 @@
                         [<a href="https://github.com/apple/ml-isqoe?tab=readme-ov-file#citation">Bibtex</a>]
                         <br>
                     </td>
+                </tr>
+                </tbody>
+                <tbody data-year="2024">
+                <tr class="publication-year">
+                    <th colspan="2" scope="rowgroup">2024</th>
                 </tr>
                 <tr>
                     <td width="30%" align=center>
@@ -880,6 +999,11 @@
                         <br>
                     </td>
                 </tr>
+                </tbody>
+                <tbody data-year="2023">
+                <tr class="publication-year">
+                    <th colspan="2" scope="rowgroup">2023</th>
+                </tr>
                 <tr>
                     <td width="30%" align=center>
                         <img width="225" align="center" src="index_files/2023-dreamsim-teaser.jpg" border="0"> &nbsp;
@@ -1051,6 +1175,11 @@
                         <br>
                     </td>
                 </tr>
+                </tbody>
+                <tbody data-year="2022">
+                <tr class="publication-year">
+                    <th colspan="2" scope="rowgroup">2022</th>
+                </tr>
                 <tr>
                     <td width="30%" align=center>
                         <img width="100" align="center" src="index_files/optimized/2022-anyres-gan.webp" border="0"> &nbsp;
@@ -1220,6 +1349,11 @@
                         <br>
                     </td>
                 </tr>
+                </tbody>
+                <tbody data-year="2021">
+                <tr class="publication-year">
+                    <th colspan="2" scope="rowgroup">2021</th>
+                </tr>
                 <tr>
                     <td width="30%" align=center>
                     <!-- height="74" -->
@@ -1368,6 +1502,11 @@
                         [<a href="./index_files/2021-cdpam-bibtex.txt">Bibtex</a>]
                         <br>
                     </td>
+                </tr>
+                </tbody>
+                <tbody data-year="2020">
+                <tr class="publication-year">
+                    <th colspan="2" scope="rowgroup">2020</th>
                 </tr>
                 <tr>
                     <td width="30%" align=center>
@@ -1551,6 +1690,11 @@
                 <span style="font-size: 16pt;"><b>2019</b></span>
                 </td></tr> -->
                 
+                </tbody>
+                <tbody data-year="2019">
+                <tr class="publication-year">
+                    <th colspan="2" scope="rowgroup">2019</th>
+                </tr>
                 <tr>
                     <td width="30%" align=left>
                     <!-- height="74" -->
@@ -1632,6 +1776,11 @@
 <!--                 <tr><td width="30%" align=left>
                 <span style="font-size: 16pt;"><b>2018</b></span>
                 </td></tr> -->
+                </tbody>
+                <tbody data-year="2018">
+                <tr class="publication-year">
+                    <th colspan="2" scope="rowgroup">2018</th>
+                </tr>
                 <tr>
                     <td width="30%" align=left>
                     <!-- height="74" -->
@@ -1679,6 +1828,11 @@
                 <span style="font-size: 16pt;"><b>2017</b></span>
                 </td></tr> -->
                 
+                </tbody>
+                <tbody data-year="2017">
+                <tr class="publication-year">
+                    <th colspan="2" scope="rowgroup">2017</th>
+                </tr>
                 <tr>
                     <td width="30%" align=left>
                     <!-- height="74" -->
@@ -1755,6 +1909,11 @@
                 <span style="font-size: 16pt;"><b>2016</b></span>
                 </td></tr> -->
                 
+                </tbody>
+                <tbody data-year="2016">
+                <tr class="publication-year">
+                    <th colspan="2" scope="rowgroup">2016</th>
+                </tr>
                 <tr>
                     <td width="30%" align=left>
                     <!-- height="90" -->
@@ -1782,6 +1941,11 @@
                 <span style="font-size: 16pt;"><b>2015</b></span>
                 </td></tr> -->
                 
+                </tbody>
+                <tbody data-year="2015">
+                <tr class="publication-year">
+                    <th colspan="2" scope="rowgroup">2015</th>
+                </tr>
                 <tr>
 					<td width="30%" align=left>
 						<img width="250" align="center" src="index_files/optimized/2015-sensor-fusion-segmentation.jpg" border="0">
@@ -1812,6 +1976,11 @@
                 </td></tr> -->
                 
 
+                </tbody>
+                <tbody data-year="2014">
+                <tr class="publication-year">
+                    <th colspan="2" scope="rowgroup">2014</th>
+                </tr>
                 <tr>
                     <td width="30%" align="center">
                     <!-- height="100" -->
