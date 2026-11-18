@@ -106,7 +106,8 @@
             align-self: center;
             padding: 0 2px;
             color: #888;
-            font-size: 14pt;
+            font-size: 20pt;
+            line-height: 1;
         }
         .publication-topic-count {
             font-size: 0.8em;
@@ -118,11 +119,8 @@
             margin-right: 4px;
             vertical-align: -0.15em;
         }
-        #publication-count {
-            flex-basis: 100%;
-            margin: 0;
-            color: #555;
-            font-size: 10pt;
+        .publication-topics-secondary button:not([aria-pressed="true"]) .publication-topic-icon {
+            color: #999;
         }
         .publication-year th {
             padding: 14px 0 2px;
@@ -258,7 +256,6 @@
             <h2>Publications</h2>
             <div id="publication-filter" hidden>
                 <div class="publication-topics" role="group" aria-label="Filter publications by topic"></div>
-                <p id="publication-count" role="status" aria-live="polite"></p>
             </div>
         </div>
         <font face="helvetica, ariel, &#39;sans serif&#39;">

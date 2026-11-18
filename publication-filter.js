@@ -1,7 +1,6 @@
 (function () {
     const filter = document.getElementById('publication-filter');
     const buttons = filter.querySelector('.publication-topics');
-    const count = document.getElementById('publication-count');
     const table = document.getElementById('publications');
     const normalize = text => text.replace(/\s+/g, ' ').trim();
 
@@ -60,7 +59,6 @@
             for (const button of buttons.querySelectorAll('button')) {
                 button.setAttribute('aria-pressed', String(button.dataset.topic === topic));
             }
-            count.textContent = `Showing ${matching.size} of ${papers.length} papers`;
 
             if (animate && !reducedMotion.matches && typeof document.startViewTransition === 'function') {
                 const current = document.startViewTransition(update);
@@ -90,6 +88,7 @@
         ];
         const labels = { 'geometry-3d': '3D/Geometry', 'video-generation': 'Video' };
         const icons = {
+            all: ['M3 3h7v7H3ZM14 3h7v7h-7ZM3 14h7v7H3ZM14 14h7v7h-7Z'],
             highlights: ['m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-2.9-5.6 2.9 1.1-6.2L3 9.6l6.2-.9Z'],
             new: ['m12 2 2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5Z'],
             image: ['M3 3h18v18H3Z', 'm3 17 5-6 4 4 3-3 6 6', 'M16 7h.01'],
@@ -97,7 +96,21 @@
             'geometry-3d': ['m12 2 9 5v10l-9 5-9-5V7Z', 'm3 7 9 5 9-5', 'M12 12v10'],
             audio: ['M3 10v4m4-8v12m5-16v20m5-16v12m4-8v4'],
             'generative-models': ['m3 17 12-12 4 4L7 21Z', 'm12 8 4 4', 'M5 2v6M2 5h6m12-4v6m-3-3h6'],
-            'understanding-models': ['M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z', 'M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0']
+            'understanding-models': ['M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z', 'M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0'],
+            'perceptual-metrics': ['M12 5a3 3 0 0 0-5-2 4 4 0 0 0-4 5 4 4 0 0 0-1 7 4 4 0 0 0 4 5 3 3 0 0 0 6 0Zm0 0a3 3 0 0 1 5-2 4 4 0 0 1 4 5 4 4 0 0 1 1 7 4 4 0 0 1-4 5 3 3 0 0 1-6 0Z', 'M7 3v4m-4 1 4 2m-5 5h4m0 5 2-4m9-13v4m4 1-4 2m5 5h-4m0 5-2-4'],
+            'autoregressive-models': ['M2 9h6v6H2Zm14 0h6v6h-6Z', 'M8 12h8m-3-3 3 3-3 3'],
+            'personalization-customization-few-shot-generation': ['M16 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0', 'M4 21v-2a8 6 0 0 1 16 0v2'],
+            'data-attribution': ['M4 9a8 8 0 0 1 16 0v4c0 3-1 6-3 8', 'M4 13c0 3-1 5-2 6', 'M8 20c2-3 2-6 2-10a2 2 0 0 1 4 0v3c0 4-1 7-2 9', 'M6 16c1-2 0-5 1-8a5 5 0 0 1 10 2v3c0 2 0 4-1 6'],
+            'diffusion-flow-matching': ['M2 6c5-7 5 7 10 0s5 7 10 0M2 12c5-7 5 7 10 0s5 7 10 0M2 18c5-7 5 7 10 0s5 7 10 0'],
+            'distillation-efficiency': ['m13 2-9 12h7l-1 8 10-12h-8Z'],
+            'image-forensics': ['M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0', 'm15 15 6 6'],
+            gans: ['M2 3h7v7H2Zm13 11h7v7h-7Z', 'M12 5h7v6m-3-3 3 3 3-3M12 19H5v-6m-3 3 3-3 3 3'],
+            'image-editing': ['M12 3H3v18h18v-9', 'm10 11 9-9 3 3-9 9-5 2Z', 'm17 4 3 3'],
+            interaction: ['m5 2 14 12-7 1-3 7Z'],
+            'neural-fields': ['m2 16 5-9 5 5 5-9 5 13-10 6Z', 'm2 16 10-4 10 4M7 7l5 15 5-19'],
+            'representation-learning': ['m12 2 10 5-10 5L2 7Z', 'm2 12 10 5 10-5M2 17l10 5 10-5'],
+            'responsible-genai': ['m12 2 9 4v6c0 5-4 8-9 10-5-2-9-5-9-10V6Z', 'm8 12 3 3 5-6'],
+            'signal-processing': ['M2 12h3c3-16 5-16 7 0s5 16 7 0h3']
         };
         const primary = document.createElement('div');
         primary.className = 'publication-topics-primary';
