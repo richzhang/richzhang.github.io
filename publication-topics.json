@@ -252,6 +252,7 @@
         "autoregressive-models",
         "generative-models",
         "language",
+        "new",
         "representation-learning"
       ],
       "evidence_urls": [
@@ -267,7 +268,8 @@
         "diffusion-flow-matching",
         "distillation-efficiency",
         "generative-models",
-        "image"
+        "image",
+        "new"
       ],
       "evidence_urls": [
         "https://arxiv.org/abs/2610.42135",
@@ -284,6 +286,7 @@
         "distillation-efficiency",
         "generative-models",
         "interaction",
+        "new",
         "video-generation"
       ],
       "evidence_urls": [

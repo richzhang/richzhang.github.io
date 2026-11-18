@@ -2,9 +2,9 @@ id,year,title,(Perceptual) Metrics,3D & geometry,Audio,Autoregressive models,Cus
 2026-tpips,2026,The Many Senses of Visual Similarity: A Text-Prompted Image Perceptual Metric,x,,,,,,,,,,,,x,,,,,x,x,,,x,
 2026-raev2,2026,Improved Baselines with Representation Autoencoders,,,,,,,x,x,,,x,,x,,,,,x,x,,,,
 2026-unite,2026,End-to-End Training for Unified Tokenization and Latent Denoising,,,,,,,x,,,,x,,x,,,,,x,x,,,,
-2026-latent-lattice,2026,Latent Lattice Language Models,,,,x,,,,,,,x,,,,,x,,,x,,,,
-2026-critic-matters,2026,A Better Critic Matters for Distribution Matching Distillation,,,,,,,x,x,,,x,,x,,,,,,,,,,
-2026-editstream,2026,EditStream: A Unified Autoregressive Framework for Interactive Video Generation and Editing,,,,x,,,x,x,,,x,,,,x,,,,,,,,x
+2026-latent-lattice,2026,Latent Lattice Language Models,,,,x,,,,,,,x,,,,,x,,x,x,,,,
+2026-critic-matters,2026,A Better Critic Matters for Distribution Matching Distillation,,,,,,,x,x,,,x,,x,,,,,x,,,,,
+2026-editstream,2026,EditStream: A Unified Autoregressive Framework for Interactive Video Generation and Editing,,,,x,,,x,x,,,x,,,,x,,,x,,,,,x
 2026-vid2vid-long,2026,Consistent Video-to-Video Translation via Explicit Correspondences,,,,x,,,x,x,,,x,,,,x,,,,,,,,x
 2026-diffusibility-high-dimensional-latents,2026,On the Diffusibility of High-Dimensional Latents,,,,,,,x,,,,x,,x,,,,,,x,,,,
 2026-id-sim,2026,ID-Sim: An Identity-Focused Similarity Metric,x,,,,,,,,,,,,x,,,,,,x,,,x,
