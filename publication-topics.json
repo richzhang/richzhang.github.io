@@ -150,6 +150,13 @@
       "parents": []
     },
     {
+      "id": "new",
+      "label": "New",
+      "group": "collections",
+      "origin": "user",
+      "parents": []
+    },
+    {
       "id": "representation-learning",
       "label": "Representations",
       "group": "foundations",
@@ -193,6 +200,7 @@
       "tags": [
         "perceptual-metrics",
         "image",
+        "new",
         "representation-learning",
         "understanding-models"
       ]
@@ -206,6 +214,7 @@
         "distillation-efficiency",
         "generative-models",
         "image",
+        "new",
         "representation-learning"
       ],
       "evidence_urls": [
@@ -220,6 +229,7 @@
         "diffusion-flow-matching",
         "generative-models",
         "image",
+        "new",
         "representation-learning"
       ],
       "notes": "Uses rectified flow, but explicitly does not require adversarial losses.",
