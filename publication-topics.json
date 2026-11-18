@@ -2,7 +2,7 @@
   "version": 1,
   "status": "approved",
   "source": "index.html",
-  "scope": "The 78 entries in Publications; excludes the separate thesis entry.",
+  "scope": "The 79 entries in Publications; excludes the separate thesis entry.",
   "tagging_policy": {
     "editing": "Edit publication-topics.csv: each keyword has its own column, with x for applicable keywords and blanks otherwise. Keep id, year, and title unchanged, then run python3 update-publication-topics.py to regenerate the JSON and browser data. Parent categories are included automatically.",
     "overlap": "Papers may have multiple tags. Tags describe central contributions, core techniques, or the systems being studied, rather than every ingredient used.",
@@ -258,6 +258,21 @@
       "evidence_urls": [
         "https://arxiv.org/abs/2611.21608",
         "https://shivamduggal4.github.io/latent-lattice-language-models/"
+      ]
+    },
+    {
+      "id": "2026-competitive-flow-matching",
+      "year": 2026,
+      "title": "Expanding the Quality-Coverage Frontier with Competitive Flow Matching",
+      "tags": [
+        "diffusion-flow-matching",
+        "generative-models",
+        "image",
+        "new"
+      ],
+      "evidence_urls": [
+        "https://arxiv.org/abs/2611.07055",
+        "https://lilydaytoy.github.io/CFM/"
       ]
     },
     {
